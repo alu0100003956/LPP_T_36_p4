@@ -2,14 +2,15 @@
 
 #definición de una clase complejos para trabajar con numeros complejos
 class Complejos
-	def initialize(real,imaginaria = "i")
+	attr_reader :real, :imaginaria
+	def initialize(real, imaginaria)
 		@real,@imaginaria = real, imaginaria
 	end
-	def real()
-		@real
+
+	def to_s
+		"#{@real}+#{@imaginaria}"
 	end
-	def imaginaria()
-		@imaginaria
+	def +(other)
+		Complejos.new(@real+other.real,@imaginaria+other.imaginaria)
 	end
-	
 end
