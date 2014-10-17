@@ -20,6 +20,6 @@ class TestComplejos < Test::Unit::TestCase
 		assert_equal(@comb.to_s, (@comab - @coma).to_s )
 		assert_equal(@comc.to_s, (@coma * @comb).to_s )
 		assert_equal(@comd.to_s, (@comb / @coma).to_s )
-		assert_equal(@come.to_s, (@comb r 2).to_s)
+		assert_equal(@come.to_s, (@comb * 2).to_s)
 	end
 end
