@@ -13,13 +13,16 @@ class TestComplejos < Test::Unit::TestCase
 		@comc = Complejos.new(-4,7)
 		@comd = Complejos.new(1.6,-0.2)
 		@come = Complejos.new(4,6)
+		@come_a = Complejos.new(7,19)
+		@come_b = Complejos.new(3,1)
+		@come_c = Complejos.new(4,5)
 	end
 
 	def test_operaciones_aritmeticas
 		assert_equal(@comab.to_s, (@coma + @comb).to_s )
 		assert_equal(@comb.to_s, (@comab - @coma).to_s )
 		assert_equal(@comc.to_s, (@coma * @comb).to_s )
-		assert_equal(@comd.to_s, (@comb / @coma).to_s )
+		assert_equal(@com_c.to_s, (@come_a / @coma_b).to_s )
 		assert_equal(@come.to_s, (@comb * 2).to_s)
 	end
 end
