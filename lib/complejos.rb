@@ -31,7 +31,7 @@ class Complejos
 	def /(other)
 		if (other.is_a? Complejos)
 			denominador = (other.real * other.real - other.imaginaria * other.imaginaria).to_f
-			Complejos.new((@real * other.real - @imaginaria * other.imaginaria)) / denominador, 
+			Complejos.new((@real * other.real - @imaginaria * other.imaginaria) / denominador, 
 				(@imaginaria * other.real . @real * other.imaginaria) / denominador)
 		end
 	end
